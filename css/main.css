@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    width: 100vw;
+    margin: 0;
+    font-family: "Open Sans";
+    
+}
+
+body {
+    margin: 0;
+   
+}
+
+.header {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+
+.headleft {
+    display: flex;
+    justify-self: left;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding-left: 5vw;
+}
+
+.headleft h1 {
+    font-weight: 900;
+    font-size: 45px;
+    margin: 3px;
+    padding-left: 55px;
+    font-kerning: auto;
+}
+
+.headright {
+    
+    display: flex;
+    justify-self: right;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 2vw;
+    
+    
+}
+
+.searchbar {
+    height: 40px;
+    width: 45vw;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.searchbar:focus {
+    outline: none;
+    
+}
+
+.searchsub {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    background-image: url("../resources/Magnifying-Glass.png");
+    background-size: 45px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 1vw;
+}
+
+.searchsub:hover {
+    background-color: lightgray;
+}
+
+.searchform {
+    display: flex;
+    padding-right: 2.5vw;
+}
+
+.headbutt {
+    width: 20vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headbutt button {
+    height: 40px;
+    width: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.headbutt button:hover {
+    background-color: lightgray;
+}
+
+.cartbutt {
+    background-image: url("../resources/Shopping-Cart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45px 30px;
+}
+
+.homebutt {
+    background-image: url(https://pics.freeicons.io/uploads/icons/png/14387179071578981527-512.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+.accbutt {
+    background-image: url(https://cdn.iconscout.com/icon/free/png-512/account-269-866236.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+.bookcontent {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contdisp {
+    width: 40vw;
+    height: 400px;
+    margin: 3vw;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+
+.contdisp h3 {
+    font-size: 27px;
+    margin-bottom: 27px;
+}
+
+.accmenu {
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+    margin-top: 86px;
+    position: absolute;
+    background-color: lightgray;
+    width: 130px;
+    height: 160px;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    margin-left: 170px;
+    margin-top: 70px;
+}
+
+.accmenu a {
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.accmenu a:hover {
+    text-decoration: underline;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+    width: 30%;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 84px;
+}
+
+.bookbutt {
+    margin-top: -5px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+
+.bookbutt2 {
+    margin: 3px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+
+.bookbutt:hover {
+    background-color: lightgray;
+}
+
+.bookbutt2:hover {
+    background-color: lightgray;
+}
+
+.bookimg {
+    width: 100px; 
+    height: 160px; 
+}
+
+.bookrevolve {
+    display: flex; 
+    overflow: auto;
+}
+
+.hideable {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+    border-radius: 5px;
+    position: absolute;
+    justify-content: space-around;
+    
+    text-align: center;
+}
+
+.hidpic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.hidpic p {
+    margin: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 84px;
+}
+
+.hidfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidfo p {
+    margin: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 84px;
+}
+
+#title {
+    padding-top: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+#create {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#c {
+    width: 50%;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: lightgray;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    flex-wrap: wrap;
+    align-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#c label {
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+#c input {
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 15px;
+    border: none;
+    
+}
+
+#c input:focus {
+    outline: none;
+}
+
+#signsubmit {
+    width: 100%;
+    margin-top: 10px;
+    margin: 3px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+
+#signsubmit:hover {
+    background-color: silver;
+}
+
+#logger {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logged {
+    background-color: lightgray;
+    padding: 30px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+
+#logged label {
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+#logged input {
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 15px;
+    border: none;
+   
+}
+
+#logged input:focus {
+    outline: none;
+}
+
+#lin {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+#lin:hover {
+    background-color: silver;
+}
+
+#logged button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 15px;
+    border: none;
+    
+    margin-top: 15px;
+}
+
+#logged button:hover {
+    background-color: silver;
+}
+
+#prof {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
+    width: 50%;
+}
+
+#prof a {
+    width: 50%;
+    margin: auto;
+}
+
+#prof button {
+    width: 100%;
+}
+
+#yourprof {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}

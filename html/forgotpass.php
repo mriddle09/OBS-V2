@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>login</title>
+  <title>Forgotten Password</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -36,19 +36,14 @@
     </div>
 
 
-    <div id="logger">
-        <h1>Log In</h1>
+    <div class="fieldhold">
+        <h1>Forgotten Password</h1>
 
-        <div id="logged">
+        <div class="fields">
             <label>Email</label>
             <input type="email" placeholder="enter email">
             <br>
-            <label>Password</label>
-            <input type="password" placeholder="enter password">
-            <br>
-            <a href="../html/userhomepage.php"><input id="lin" type="submit" value="Login"></a>
-            <a href="../html/forgotpass.php"><button>Reset Password</button></a>
-            <a href="../html/signup.php"><button>Create Account</button></a>
+            <input id="forgotsub" type="submit" value="submit">
         </div>
     </div>
 

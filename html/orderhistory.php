@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>login</title>
+  <title>profile</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
 <body>
 
-<div class="header">
+    <div class="header">
         <div class="headleft">
             <h1>OBS</h1>
         </div>
@@ -33,23 +33,27 @@
             
         </div>
         
-    </div>
+    </div> 
 
+    <div class="past">
 
-    <div id="logger">
-        <h1>Log In</h1>
+        <h2>Order History</h2>
 
-        <div id="logged">
-            <label>Email</label>
-            <input type="email" placeholder="enter email">
-            <br>
-            <label>Password</label>
-            <input type="password" placeholder="enter password">
-            <br>
-            <a href="../html/userhomepage.php"><input id="lin" type="submit" value="Login"></a>
-            <a href="../html/forgotpass.php"><button>Reset Password</button></a>
-            <a href="../html/signup.php"><button>Create Account</button></a>
-        </div>
+            <div class="scrollable">
+                <?php for ($j = 0; $j < 80; $j++) : ?>
+
+                <div class="pastbook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg">
+                        <div class="innerinfo">
+                            <p>To Kill A Mocking Bird</p>
+                            <p>Harper Lee</p>
+                        </div>    
+                        <button>Buy Again</button>
+                </div>
+
+                <?php endfor; ?>
+            </div>
+
     </div>
 
 </body>

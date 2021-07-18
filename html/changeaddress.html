@@ -2,17 +2,17 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>login</title>
+  <title>Change Address</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
 <body>
 
-<div class="header">
-        <div class="headleft">
-            <h1>OBS</h1>
-        </div>
-        
+  <div class="header">
+    <div class="headleft">
+        <h1>OBS</h1>
+    </div>
+    
         <div class="headright">
             <form class="searchform">
                 <input class="searchbar" type="text" placeholder="Search">
@@ -32,25 +32,41 @@
             </div>
             
         </div>
-        
+    
     </div>
 
+    <div class="infochanger">
 
-    <div id="logger">
-        <h1>Log In</h1>
-
-        <div id="logged">
-            <label>Email</label>
-            <input type="email" placeholder="enter email">
-            <br>
-            <label>Password</label>
-            <input type="password" placeholder="enter password">
-            <br>
-            <a href="../html/userhomepage.php"><input id="lin" type="submit" value="Login"></a>
-            <a href="../html/forgotpass.php"><button>Reset Password</button></a>
-            <a href="../html/signup.php"><button>Create Account</button></a>
+        <div id="personaladdress">
+            <h2>Current Address</h2>
+            <h4>Your Address</h4>
+            
         </div>
+
+        <div class="fieldhold">
+            <h2>Change Address</h2>
+            <div class="fields">
+                <label>Street</label>
+                <input type="text">
+                <br>
+                <label>City</label>
+                <input type="text">
+                <br>
+                <label>State</label>
+                <input type="text">
+                <br>
+                <label>Zip</label>
+                <input type="number">
+                <br>
+                <input class="ressub" type="submit">
+            </div>
+        </div>
+
     </div>
+
+        
+
+
 
 </body>
 </html>

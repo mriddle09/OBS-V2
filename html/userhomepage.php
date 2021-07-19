@@ -1,6 +1,7 @@
 <?php
 
     include("../php/database.php");
+    require_once("../php/initbooks.php");
     include("../php/getbooks.php");
     include("../php/getbestsellers.php");
     include("../php/getfeatured.php");

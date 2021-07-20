@@ -1,3 +1,10 @@
+<?php
+
+    include("../php/getactiveuser.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +33,8 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.html">View Profile</a>
-                    <a href="../html/userhomepage.php">Log Out</a>
+                    <a href="../html/profile.php">View Profile</a>
+                    <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>
             
@@ -39,11 +46,11 @@
         <h1>Your Profile</h1>
 
         <div id="prof">
-            <h2>Welcome, UserName</h2>
-            <a href="../html/changepassword.html"><button>Change Password</button></a>
-            <a href="../html/changepersonalinfo.html"><button>Change Personal Info</button></a>
-            <a href="../html/changepayment.html"><button>Change Payment Info</button></a>
-            <a href="../html/changeaddress.html"><button>Change Address</button></a>
+            <h2>Welcome, <?php echo $activeuser['firstName'] ?></h2>
+            <a href="../html/changepassword.php"><button>Change Password</button></a>
+            <a href="../html/changepersonalinfo.php"><button>Change Personal Info</button></a>
+            <a href="../html/changepayment.php"><button>Change Payment Info</button></a>
+            <a href="../html/changeaddress.php"><button>Change Address</button></a>
             <a><button>Manage Subscription</button></a>
             <a href="../html/orderhistory.php"><button>Order History</button></a>
 

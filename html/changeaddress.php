@@ -1,8 +1,14 @@
+<?php
+
+    include("../php/getactiveuser.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Change Payment Information</title>
+  <title>Change Address</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -26,8 +32,8 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.html">View Profile</a>
-                    <a href="../html/userhomepage.php">Log Out</a>
+                    <a href="../html/profile.php">View Profile</a>
+                    <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>
             
@@ -38,26 +44,31 @@
     <div class="infochanger">
 
         <div id="personaladdress">
-            <h2>Current Payment</h2>
-            <h4>Card Type</h4>
-            <h4>Card Number</h4>
-            <h4>Expiration Date</h4>
+            <h2>Current Address</h2>
+            <h4><?php echo $activeuser['street']; ?></h4>
+            <h4><?php echo $activeuser['city'] . ", " . $activeuser['stateID'] . " " . $activeuser['zip']; ?></h4>
+            
             
         </div>
 
         <div class="fieldhold">
-            <h2>Change Payment Information</h2>
+            <h2>Change Address</h2>
             <div class="fields">
-                <label>New Card Type</label>
-                <input type="text">
-                <br>
-                <label>New Card Number</label>
-                <input type="text">
-                <br>
-                <label>New Card Expiration</label>
-                <input type="date">
-                <br>
-                <input class="ressub" type="submit">
+                <form method="POST" action="../php/updateaddress.php">
+                    <label>Street</label>
+                    <input name="cstreet" type="text">
+                    <br>
+                    <label>City</label>
+                    <input name="ccity" type="text">
+                    <br>
+                    <label>State</label>
+                    <input name="cstate" type="text">
+                    <br>
+                    <label>Zip</label>
+                    <input name="czip" type="number">
+                    <br>
+                    <input class="ressub" type="submit">
+                </form>
             </div>
         </div>
 

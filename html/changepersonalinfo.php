@@ -1,8 +1,14 @@
+<?php 
+
+    include("../php/getactiveuser.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Change Address</title>
+  <title>Change Personal Information</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -26,8 +32,8 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.html">View Profile</a>
-                    <a href="../html/userhomepage.php">Log Out</a>
+                    <a href="../html/profile.php">View Profile</a>
+                    <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>
             
@@ -37,28 +43,28 @@
 
     <div class="infochanger">
 
-        <div id="personaladdress">
-            <h2>Current Address</h2>
-            <h4>Your Address</h4>
-            
+        <div id="personalinfo">
+            <h2>Current Information</h2>
+            <h4><?php echo $activeuser['firstName'] . " " . $activeuser['lastName']; ?></h4>
+            <h4><?php echo $activeuser['phone']; ?></h4>
+            <h4><?php echo $activeuser['email']; ?></h4>
         </div>
 
         <div class="fieldhold">
-            <h2>Change Address</h2>
+            <h2>Change Personal Information</h2>
             <div class="fields">
-                <label>Street</label>
-                <input type="text">
-                <br>
-                <label>City</label>
-                <input type="text">
-                <br>
-                <label>State</label>
-                <input type="text">
-                <br>
-                <label>Zip</label>
-                <input type="number">
-                <br>
-                <input class="ressub" type="submit">
+                <form method="POST" action="../php/updatepersonalinfo.php">
+                    <label>First Name</label>
+                    <input name="changefn" type="text">
+                    <br>
+                    <label>Last Name</label>
+                    <input name="changeln" type="text">
+                    <br>
+                    <label>Phone Number</label>
+                    <input name="changetel" type="tel">
+                    <br>
+                    <input class="ressub" type="submit">
+                </form>
             </div>
         </div>
 

@@ -1,8 +1,14 @@
+<?php 
+
+    include("../php/getactiveuser.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>cart</title>
+  <title>Account Creation Confirmation</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -34,6 +40,11 @@
     </div>
     
 </div>
+
+    <div>
+        <h1>Welcome, <?php echo $activeuser['firstName'] ?></h1>
+        <h2>Your account has been succesfully created.</h2>
+    </div>
 
 </body>
 </html>

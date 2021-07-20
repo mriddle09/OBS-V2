@@ -26,8 +26,8 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.html">View Profile</a>
-                    <a href="../html/userhomepage.php">Log Out</a>
+                    <a href="../html/profile.php">View Profile</a>
+                    <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>
             
@@ -40,13 +40,15 @@
         <h1>Log In</h1>
 
         <div id="logged">
-            <label>Email</label>
-            <input type="email" placeholder="enter email">
-            <br>
-            <label>Password</label>
-            <input type="password" placeholder="enter password">
-            <br>
-            <a href="../html/userhomepage.php"><input id="lin" type="submit" value="Login"></a>
+            <form method="POST" action="../php/login.php">
+                <label>Email</label>
+                <input name="email" type="email" placeholder="enter email">
+                <br>
+                <label>Password</label>
+                <input name="password" type="password" placeholder="enter password">
+                <br>
+                <a href="../html/userhomepage.php"><input id="lin" type="submit" value="Login"></a>
+            </form>
             <a href="../html/forgotpass.php"><button>Reset Password</button></a>
             <a href="../html/signup.php"><button>Create Account</button></a>
         </div>

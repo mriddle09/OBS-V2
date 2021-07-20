@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Change Personal Information</title>
+  <title>Change Payment Information</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -26,8 +26,8 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.html">View Profile</a>
-                    <a href="../html/userhomepage.php">Log Out</a>
+                    <a href="../html/profile.php">View Profile</a>
+                    <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>
             
@@ -37,21 +37,25 @@
 
     <div class="infochanger">
 
-        <div id="personalinfo">
-            <h2>Current Information</h2>
-            <h4>Your Name</h4>
-            <h4>Your Phone Number</h4>
-            <h4>Your Email Address</h4>
+        <div id="personaladdress">
+            <h2>Current Payment</h2>
+            <h4>Card Type</h4>
+            <h4>Card Number</h4>
+            <h4>Expiration Date</h4>
+            
         </div>
 
         <div class="fieldhold">
-            <h2>Change Personal Information</h2>
+            <h2>Change Payment Information</h2>
             <div class="fields">
-                <label>Name</label>
+                <label>New Card Type</label>
                 <input type="text">
                 <br>
-                <label>Phone Number</label>
-                <input type="tel">
+                <label>New Card Number</label>
+                <input type="text">
+                <br>
+                <label>New Card Expiration</label>
+                <input type="date">
                 <br>
                 <input class="ressub" type="submit">
             </div>

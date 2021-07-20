@@ -26,8 +26,8 @@
             <div id="usermenu" class="accmenu">
                 <a href="../html/signup.php">Sign Up</a>
                 <a href="../html/login.php">Log In</a>
-                <a href="../html/profile.html">View Profile</a>
-                <a href="../html/userhomepage.php">Log Out</a>
+                <a href="../html/profile.php">View Profile</a>
+                <a href="../php/logout.php">Log Out</a>
             </div>
         </div>
         
@@ -37,16 +37,18 @@
     <div class="fieldhold">
         <h2>Reset Password</h2>
         <div class="fields">
+            <form method="POST" action="../php/changepassword.php">
             <label>Old Password</label>
-            <input type="text">
+            <input name="oldpass" type="text">
             <br>
             <label>New Password</label>
-            <input type="text">
+            <input name="newpass" type="text">
             <br>
             <label>Confirm New Password</label>
             <input type="text">
             <br>
             <input class="ressub" type="submit">
+            </form>
         </div>
     </div>
     

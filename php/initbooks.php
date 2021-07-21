@@ -1,5 +1,5 @@
 <?php
-	include("../php/database.php)
+	"include("../php/database.php")
 	
 	$createbooks = "CREATE TABLE IF NOT EXISTS `books` (
         `bookID` int(11) NOT NULL AUTO_INCREMENT,

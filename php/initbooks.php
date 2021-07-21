@@ -1,6 +1,7 @@
 <?php
-
-    $createbooks = "CREATE TABLE IF NOT EXISTS `books` (
+	include("../php/database.php)
+	
+	$createbooks = "CREATE TABLE IF NOT EXISTS `books` (
         `bookID` int(11) NOT NULL AUTO_INCREMENT,
         `Title` varchar(255) NOT NULL,
         `Author` varchar(255) NOT NULL,

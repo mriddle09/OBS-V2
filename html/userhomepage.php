@@ -1,8 +1,8 @@
 <?php
 
     include("../php/database.php");
-    require_once("../php/initbooks.php");
-    require_once("../php/usersinit.php");
+    include_once("../php/initbooks.php");
+    include_once("../php/usersinit.php");
     include("../php/getbooks.php");
     include("../php/getbestsellers.php");
     include("../php/getfeatured.php");
@@ -37,7 +37,7 @@
                 <div id="usermenu" class="accmenu">
                     <a href="../html/signup.php">Sign Up</a>
                     <a href="../html/login.php">Log In</a>
-                    <a href="../html/profile.php">View Profile</a>
+		    <a href="../html/profile.php">View Profile</a>
                     <a href="../php/logout.php">Log Out</a>
                 </div>
             </div>

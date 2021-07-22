@@ -42,15 +42,12 @@
         <form id="c" method="POST" action="../php/createaccount.php">
             <label>Email</label>
             <input name="cemail" type="email" placeholder="enter email" required>
-            <br>
-            <label>Confirm Email</label>
-            <input type="email" placeholder="confirm email" required>
+            
             <br>
             <label>Password</label>
             <input name="cpass" type="password" placeholder="create password" required>
-            <br>
-            <label>Confirm Password</label>
-            <input type="password" placeholder="confirm password" required>
+            
+           
             <br>
             <label>First Name</label>
             <input name="cfname" type="text" placeholder="First Name" required>

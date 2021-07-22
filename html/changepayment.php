@@ -1,3 +1,9 @@
+<?php 
+
+    include("../php/getactivecard.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,25 +45,47 @@
 
         <div id="personaladdress">
             <h2>Current Payment</h2>
-            <h4>Card Type</h4>
-            <h4>Card Number</h4>
-            <h4>Expiration Date</h4>
+            <h4>Card Type: 
+                <?php if ($activecard != FALSE) {
+                        echo $activecard['type']; 
+                    } 
+                    else {
+                        echo "none";
+                    }   
+                ?>
+            </h4>
+            <h4>Card Number: <?php if ($activecard != FALSE) {
+                        echo $activecard['number']; 
+                    } 
+                    else {
+                        echo "none";
+                    }   
+                ?></h4>
+            <h4>Expiration Date: <?php if ($activecard != FALSE) {
+                        echo $activecard['exp']; 
+                    } 
+                    else {
+                        echo "none";
+                    }   
+                ?></h4>
             
         </div>
 
         <div class="fieldhold">
             <h2>Change Payment Information</h2>
             <div class="fields">
+            <form method="POST" action="../php/changecard.php"> 
                 <label>New Card Type</label>
-                <input type="text">
+                <input name="newtype" type="text" required>
                 <br>
                 <label>New Card Number</label>
-                <input type="text">
+                <input name="newnum" type="text" required>
                 <br>
                 <label>New Card Expiration</label>
-                <input type="date">
+                <input name="newexp" type="date" required>
                 <br>
                 <input class="ressub" type="submit">
+            </form>
             </div>
         </div>
 

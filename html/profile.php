@@ -2,6 +2,11 @@
 
     include("../php/getactiveuser.php");
 
+    if ($activeuser == FALSE) {
+        include("../html/login.php");
+        echo "<h3 class='activecon'>Please login to view profile</h3>";
+        exit;
+    }
 ?>
 
 

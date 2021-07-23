@@ -55,7 +55,7 @@
                 ?>
             </h4>
             <h4>Card Number: <?php if ($activecard != FALSE) {
-                        echo $activecard['number']; 
+                        echo $activecard['cardNumber']; 
                     } 
                     else {
                         echo "none";

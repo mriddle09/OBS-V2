@@ -2,7 +2,7 @@
 
     include("../php/getactiveuser.php");
     include("../php/getactivecard.php");
-
+    
     $cardtype = filter_input(INPUT_POST, "newtype");
     $cardnum = filter_input(INPUT_POST, "newnum");
     $cardexp = filter_input(INPUT_POST, "newexp");
@@ -19,7 +19,7 @@
 
     if ($activecard == FALSE) {
         $updatecardquery = "INSERT INTO paymentinfo 
-                            (user, type, number, exp) 
+                            (user, type, cardNumber, exp) 
                             VALUES (:uses, :f_name, :l_name, :tel)
                         ";
         $updatecard = $db->prepare($updatecardquery);

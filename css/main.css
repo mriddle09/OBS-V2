@@ -582,3 +582,34 @@ body {
     flex-direction: column;
     margin: auto;
 }
+
+.subscription {
+    display: flex;
+    
+}
+
+.subscription p {
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.subname {
+    align-self: flex-start;
+    text-align: left;
+    
+}
+
+.subdesc {
+    align-self: baseline;
+}
+
+.subcost {
+    
+    text-align: right;
+}
+
+.subbutt {
+    align-content: center;
+    margin: auto;
+    margin-left: 50px;
+}

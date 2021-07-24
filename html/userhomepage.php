@@ -4,6 +4,7 @@
     include_once("../php/initbooks.php");
     include_once("../php/usersinit.php");
     include_once("../php/cardinfoinit.php");
+    include_once("../php/initsubs.php");
     include("../php/getbooks.php");
     include("../php/getbestsellers.php");
     include("../php/getfeatured.php");

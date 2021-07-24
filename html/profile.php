@@ -56,7 +56,7 @@
             <a href="../html/changepersonalinfo.php"><button>Change Personal Info</button></a>
             <a href="../html/changepayment.php"><button>Change Payment Info</button></a>
             <a href="../html/changeaddress.php"><button>Change Address</button></a>
-            <a><button>Manage Subscription</button></a>
+            <a href="../html/managesubs.php"><button>Manage Subscription</button></a>
             <a href="../html/orderhistory.php"><button>Order History</button></a>
 
         </div>

@@ -45,6 +45,21 @@ $querycheck = "SELECT * FROM userinfo WHERE email = :Email";
     $insertinfo->execute();
     $insertinfo->closeCursor();
 
+    include("../php/getactiveuser.php");
+    $currentid = $activeuser['userID'];
+
+
+    $setsubquery = "INSERT INTO activesubs
+                        (plan, user)
+                    VALUE
+                        (1, :new_ID)
+                    ";
+    $setsub = $db->prepare($setsubquery);
+    $setsub->bindValue(':new_ID', $currentid);
+    $setsub->execute();
+    $setsub->closeCursor(); 
+
+
     include("../html/accountconfirm.php");
 
     

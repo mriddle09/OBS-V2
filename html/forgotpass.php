@@ -42,7 +42,7 @@
 	<div class="fields">
 	    <form method=POST action="../php/sendemail.php">
             <label>Email</label>
-            <input type="email" placeholder="enter email">
+            <input type="email" name="forgotPW" placeholder="enter email">
             <br>
 	    <input id="forgotsub" type="submit" value="submit">
 	    </form>

@@ -7,7 +7,7 @@ use Postmark\PostmarkClient;
 
 $client = new PostmarkClient("a8d0af96-5427-4b31-805f-8f30bf313191");
 $fromEmail = "griffinhines@uga.edu";
-$toEmail = filter_input(INPUT_POST, 'email');
+$toEmail = filter_input(INPUT_POST, 'forgotPW');
 $subject = "Reset Password";
 $htmlBody = "<strong>Hello</strong> click the following link to reset your password";
 $textBody = "";

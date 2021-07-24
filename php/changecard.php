@@ -31,9 +31,9 @@
     } else {
 
         $updatecardquery = "UPDATE paymentinfo SET
-                        'type' = :f_name,
-                        'number' = :l_name,
-                        'exp' = :tel
+                        type = :f_name,
+                        cardNumber = :l_name,
+			exp = :tel
                         WHERE user = :active_card
                         ";
         $updatecard = $db->prepare($updatecardquery);

@@ -6,7 +6,7 @@ $createsubs = "CREATE TABLE IF NOT EXISTS `subscriptions`
                   `description` TEXT NOT NULL ,  
                   `cost` DOUBLE NOT NULL,
                   PRIMARY KEY(`subID`)
-		   ) ENGINE = InnoDB";
+		   )ENGINE = InnoDB DEFAULT CHARSET=utf8mb4";
 
 $db->exec($createsubs);
 
@@ -14,10 +14,8 @@ $createactsubs = "CREATE TABLE IF NOT EXISTS `activesubs`
 	       ( `subscripID` INT NOT NULL AUTO_INCREMENT , 
 	         `plan` INT NOT NULL , 
 		 `user` INT NOT NULL , 
-		 PRIMARY KEY (`subscripID`),
-		 FOREIGN KEY (`plan`) REFERENCES `subscriptions`(`subID`),
-		 FOREIGN KEY (`user`) REFERENCES `userinfo`(`userID`)		 		 
-		 ) ENGINE = InnoDB";
+		 PRIMARY KEY (`subscripID`)
+ 	 	 )ENGINE = InnoDB DEFAULT CHARSET=utf8mb4";
 
 $db->exec($createactsubs);
 

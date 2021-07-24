@@ -39,13 +39,14 @@
     <div class="fieldhold">
         <h1>Forgotten Password</h1>
 
-        <div class="fields">
+	<div class="fields">
+	    <form method=POST action="../php/sendemail.php">
             <label>Email</label>
             <input type="email" placeholder="enter email">
             <br>
-            <input id="forgotsub" type="submit" value="submit">
+	    <input id="forgotsub" type="submit" value="submit">
+	    </form>
         </div>
     </div>
-
 </body>
 </html>

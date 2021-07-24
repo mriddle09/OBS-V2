@@ -1,20 +1,26 @@
 
 <?php
 
+#$loginquery = "SELECT pass FROM userinfo
+#                    WHERE email = forgotPW
+#                    ";
+#$getpw = $db->prepare($loginquery);
+#$getpw->execute();
+#$currentpw = $getpw->fetch();
 // Import the Postmark Client Class:
 require_once('./vendor/autoload.php');
 use Postmark\PostmarkClient;
 
-$client = new PostmarkClient("a8d0af96-5427-4b31-805f-8f30bf313191");
+$client = new PostmarkClient("5b163fe7-e191-433d-bedb-a85c198f2b24");
 $fromEmail = "griffinhines@uga.edu";
 $toEmail = filter_input(INPUT_POST, 'forgotPW');
-$subject = "Reset Password";
-$htmlBody = "<strong>Hello</strong> click the following link to reset your password";
-$textBody = "";
-$tag = "";
+$subject = "Forgot Password";
+$htmlBody = "Your password is " . $currentpw['pass'];
+$textBody = "Hello dear Postmark user.";
+$tag = "example-email-tag";
 $trackOpens = true;
 $trackLinks = "None";
-$messageStream = "broadcast";
+$messageStream = "griffin1";
 
 // Send an email:
 $sendResult = $client->sendEmail(

@@ -1,19 +1,23 @@
 <?php
 
-$createsubs = "CREATE TABLE IF NOT EXISTS `OBSV2`.`subscriptions` 
+$createsubs = "CREATE TABLE IF NOT EXISTS `subscriptions` 
                 ( `subID` INT NOT NULL ,
                   `name` VARCHAR(255) NOT NULL ,
                   `description` TEXT NOT NULL ,  
-                  `cost` DOUBLE NOT NULL
-                   ) ENGINE = InnoDB;";
+                  `cost` DOUBLE NOT NULL,
+                  PRIMARY KEY(`subID`)
+		   ) ENGINE = InnoDB";
 
 $db->exec($createsubs);
 
-$altertable = "ALTER TABLE `subscriptions` ADD PRIMARY KEY(`subID`)";
-$db->exec($altertable);
-
-$createactsubs = "CREATE TABLE `OBSV2`.`activesubs` ( `subscripID` INT NOT NULL AUTO_INCREMENT , `plan` INT NOT NULL , `user` INT NOT NULL , PRIMARY KEY (`subscripID`)) ENGINE = InnoDB;
-";
+$createactsubs = "CREATE TABLE IF NOT EXISTS `activesubs` 
+	       ( `subscripID` INT NOT NULL AUTO_INCREMENT , 
+	         `plan` INT NOT NULL , 
+		 `user` INT NOT NULL , 
+		 PRIMARY KEY (`subscripID`),
+		 FOREIGN KEY (`plan`) REFERENCES `subscriptions`(`subID`),
+		 FOREIGN KEY (`user`) REFERENCES `userinfo`(`userID`)		 		 
+		 ) ENGINE = InnoDB";
 
 $db->exec($createactsubs);
 

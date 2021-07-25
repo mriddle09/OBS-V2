@@ -44,9 +44,22 @@
         $updatecard->execute();
 
     }
+	$emailmessage = "Payment information changed";
+	$activeuserquery = "SELECT email FROM userinfo WHERE active = 1";
+        $getactiveuser = $db->prepare($activeuserquery);
+        $getactiveuser->execute();
+        $activeuser = $getactiveuser->fetch();
+        ?>
+        <form action="sendcredchangeemail.php" id="sendmessage" method="POST">
+            <input type='hidden' name='messagetype' value="<?php echo $emailmessage?>"/>
+            <input type='hidden' name='email' value="<?php echo $activeuser['email']?>"/>
+        </form>
 
 
-    
+        <script type="text/javascript">
+            document.getElementById("sendmessage").submit(); // Here formid is the id of your form
+        </script>
+<?php   
 
     
 

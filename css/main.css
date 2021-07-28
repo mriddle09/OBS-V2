@@ -110,7 +110,7 @@ body {
 }
 
 .homebutt {
-    background-image: url(https://pics.freeicons.io/uploads/icons/png/14387179071578981527-512.png);
+    background-image: url("../resources/home.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -612,4 +612,28 @@ body {
     align-content: center;
     margin: auto;
     margin-left: 50px;
+}
+
+.hideableb {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+    border-radius: 5px;
+    position: absolute;
+    justify-content: space-around;
+    background-color: gray;
+    text-align: center;
+}
+
+.hideableb p {
+    margin: auto;
+    line-height: 20px;
+}
+
+.searchresults {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
 }

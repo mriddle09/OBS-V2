@@ -20,8 +20,8 @@
     </div>
     
         <div class="headright">
-            <form class="searchform">
-                <input class="searchbar" type="text" placeholder="Search">
+        <form class="searchform" method="post" action="../php/search.php">
+                <input class="searchbar" type="text" placeholder="Search" name="searched">
                 <input class="searchsub" type="submit" value="">
             </form>
             <div class="headbutt">

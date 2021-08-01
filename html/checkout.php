@@ -1,7 +1,20 @@
 <?php 
 
     include("../php/getcart.php");
+    include("../php/getactivecard.php");
+    include("../php/getactiveuser.php");
 
+    $subtotal = 0; 
+    $shipping = 3.99;
+    $tax = 0; 
+    $total = 0; 
+
+    foreach ($carts as $c) {
+        $subtotal += $c['bookPrice'];
+    }
+    $tax = $subtotal * 0.07; 
+
+    $total = $subtotal + $shipping + $tax;
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +54,62 @@
     
 </div>
 
+<div id="checkout">
+    <div id="order">
+        
+        <?php foreach($carts as $car) : ?>
+            <div class="book">
+            <img src="<?php echo $car['bookCover'] ?>" class="bookimg">
+                <div class="infocart">
+                    <p><?php echo $car['bookName'] ?></p>
+                    <p>Price: $<?php echo $car['bookPrice'] ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
 
+        <div id="summ"> 
+        <p>Subtotal: $<?php echo round($subtotal, 2);?> </p>
+            <p>Shipping: $<?php echo round($shipping, 2);?> </p>
+            <p>Tax: $<?php echo round($tax, 2);?> </p>
+            <hr id="break"> 
+            <p>Total: $<?php echo round($total, 2);?> </p>
+        </div>
+    </div>
+
+    <div id="infomat">
+        <div id="payfo">
+            <p><?php if($activecard != FALSE) {
+                echo $activecard['type'];
+            } else {
+                echo 'none';
+            }
+            ?></p>
+            <p><?php if($activecard != FALSE) {
+                echo $activecard['cardNumber'];
+            } else {
+                echo 'none';
+            }
+            ?></p>
+            <p><?php if($activecard != FALSE) {
+                echo $activecard['exp'];
+            } else {
+                echo 'none';
+            }
+            ?></p>
+            <button>Change payment info</button>
+        </div>
+            
+        <div id="shipfo">
+            <p><?php echo $activeuser['street']?></p>
+            <p><?php echo $activeuser['city']?></p>
+            <p><?php echo $activeuser['stateID']?></p>
+            <p><?php echo $activeuser['zip']?></p>
+            <button>Change shipping info</button>
+        </div>
+        
+    </div>
+        <a href="../html/orderconfirm.php"><button>Place Order</button></a>
+</div>
 
 </body>
 </html>

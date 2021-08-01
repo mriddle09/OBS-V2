@@ -692,3 +692,35 @@ body {
     text-align: center;
 }
 
+#order {
+    display: flex;
+    
+    
+    width: 100%;
+}
+
+#summ {
+    margin: auto;
+    width: 33%;
+    justify-self: flex-end;
+}
+
+#infomat {
+    display: flex; 
+}
+
+#payfo {
+    margin: auto;
+}
+
+#shipfo {
+    margin: auto;
+}
+
+#ordcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+

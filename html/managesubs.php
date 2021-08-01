@@ -26,7 +26,7 @@
             </form>
         <div class="headbutt">
             <a href="../html/userhomepage.php"><button class="homebutt"></button></a>
-            <a href="../html/cart.html"><button class="cartbutt"></button></a>
+            <a href="../html/cart.php"><button class="cartbutt"></button></a>
             <button id="abutt" class="accbutt" onclick="userMenu()"></button>
 
             <div id="usermenu" class="accmenu">

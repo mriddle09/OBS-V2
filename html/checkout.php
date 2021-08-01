@@ -1,6 +1,6 @@
 <?php 
 
-    include("../php/getactiveuser.php");
+    include("../php/getcart.php");
 
 ?>
 
@@ -8,7 +8,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Account Creation Confirmation</title>
+  <title>cart</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/header.js"></script>
 </head>
@@ -20,10 +20,10 @@
     </div>
     
     <div class="headright">
-    <form class="searchform" method="post" action="../php/search.php">
-                <input class="searchbar" type="text" placeholder="Search" name="searched">
-                <input class="searchsub" type="submit" value="">
-            </form>
+        <form class="searchform" method="post" action="../php/search.php">
+            <input class="searchbar" type="text" placeholder="Search" name="searched">
+            <input class="searchsub" type="submit" value="">
+        </form>
         <div class="headbutt">
             <a href="../html/userhomepage.php"><button class="homebutt"></button></a>
             <a href="../html/cart.php"><button class="cartbutt"></button></a>
@@ -41,10 +41,7 @@
     
 </div>
 
-    <div>
-        <h1>Welcome, <?php echo $activeuser['firstName'] ?></h1>
-        <h2>Your account has been succesfully created.</h2>
-    </div>
+
 
 </body>
 </html>

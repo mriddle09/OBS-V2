@@ -658,9 +658,10 @@ body {
 #cartsummary {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-right: auto;
     width: 25%;
     text-align: center;
+    align-content: flex-start;
 }
 
 #odsum {

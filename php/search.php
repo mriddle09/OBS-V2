@@ -39,7 +39,7 @@
         </form>
         <div class="headbutt">
             <a href="../html/userhomepage.php"><button class="homebutt"></button></a>
-            <a href="../html/cart.html"><button class="cartbutt"></button></a>
+            <a href="../html/cart.php"><button class="cartbutt"></button></a>
             <button id="abutt" class="accbutt" onclick="userMenu()"></button>
 
             <div id="usermenu" class="accmenu">
@@ -65,7 +65,26 @@
                             <p><?php echo $result['Author'] ?></p>
                         </div>    
                         <button onclick="showDetails('<?php echo 'a'.$i ?>')"> Show Details</button>
-                        <button>Add to Cart</button>
+
+                        <form method="POST" action="../php/addtocart.php">
+
+                                <?php
+                                    $input1 = '<input type="hidden" name="bid" value="';
+                                    $hold1 = $result['bookID'];
+                                    $end1 = '">';
+                                    echo $input1.$hold1.$end1;
+
+                                ?>
+                                
+                                
+                                <input type="hidden" value="<?php echo $result['Title'] ?>" name="bname">
+                                <input type="hidden" value="<?php echo $result['Price'] ?>" name="bprice">
+                                <input type="hidden" value="<?php echo $result['Author'] ?>" name="bauth">
+                                <input type="hidden" value="<?php echo $result['Cover'] ?>" name="bcov">
+                                <input  type="submit" class="bookbutt2" value="Add to cart">
+                            </form>
+
+                        
 
                         <div id="fda<?php echo $i ?>" class="hideableb">
                         <div class="hidpic">
@@ -79,7 +98,26 @@
                         <div class="hidfo">
                             <p>Year of Publication: <?php echo $result['Year'] ?></p>
                             <p>Genre: <?php echo $result['Category'] ?></p>
-                            <button class="bookbutt2">Add to cart</button>
+
+                            <form method="POST" action="../php/addtocart.php">
+
+                                <?php
+                                    $input1 = '<input type="hidden" name="bid" value="';
+                                    $hold1 = $result['bookID'];
+                                    $end1 = '">';
+                                    echo $input1.$hold1.$end1;
+
+                                ?>
+                                
+                                
+                                <input type="hidden" value="<?php echo $result['Title'] ?>" name="bname">
+                                <input type="hidden" value="<?php echo $result['Price'] ?>" name="bprice">
+                                <input type="hidden" value="<?php echo $result['Author'] ?>" name="bauth">
+                                <input type="hidden" value="<?php echo $result['Cover'] ?>" name="bcov">
+                                <input  type="submit" class="bookbutt2" value="Add to cart">
+                            </form>
+
+                            
                             <button class="bookbutt2" onclick="hideDetails('<?php echo 'a'.$i ?>')">Hide details</button>
                         </div>
                             

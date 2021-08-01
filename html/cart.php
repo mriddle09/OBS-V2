@@ -1,3 +1,27 @@
+<?php 
+
+    include("../php/getcart.php");
+
+    if($carts == FALSE) {
+        include("../html/userhomepage.php");
+        echo "<h3 class='activecon'>Please login to view cart</h3>";
+        exit;
+    }
+
+    $subtotal = 0; 
+    $shipping = 3.99;
+    $tax = 0; 
+    $total = 0; 
+
+    foreach ($carts as $c) {
+        $subtotal += $c['bookPrice'];
+    }
+    $tax = $subtotal * 0.07; 
+
+    $total = $subtotal + $shipping + $tax;
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +44,7 @@
         </form>
         <div class="headbutt">
             <a href="../html/userhomepage.php"><button class="homebutt"></button></a>
-            <a href="../html/cart.html"><button class="cartbutt"></button></a>
+            <a href="../html/cart.php"><button class="cartbutt"></button></a>
             <button id="abutt" class="accbutt" onclick="userMenu()"></button>
 
             <div id="usermenu" class="accmenu">
@@ -39,29 +63,33 @@
     <div id="items">
         <h3>Your Cart</h3>
         <!-- start for each loop -->
+        <?php foreach ($carts as $cart) : ?>
 
             <div class="cartbook">
-                <img src="https://images.booksense.com/images/818/490/9780385490818.jpg" class="bookimg">
+                <img src="<?php echo $cart['bookCover'] ?>" class="bookimg">
                 <div class="infocart">
-                    <p>The Handmaid's Tale</p>
-                    <p>author</p>
-                    <p>Price</p>
+                    <p><?php echo $cart['bookName'] ?></p>
+                    <p><?php echo $cart['bookAuthor'] ?></p>
+                    <p>Price <?php echo $cart['bookPrice'] ?></p>
                 </div>
                     
                 <button class="bookbutt">Remove From Cart</button>
             </div>
 
+        <?php endforeach; ?>
         <!-- end for each loop-->
     </div>
         
     <div id="cartsummary">
         <h3>Order Summary</h3>
         <div id="odsum">
-            <p>Subtotal:</p>
-            <p>Shipping:</p>
-            <p>Tax:</p>
+            <p>Subtotal: $<?php echo round($subtotal, 2);?> </p>
+            <p>Shipping: $<?php echo round($shipping, 2);?> </p>
+            <p>Tax: $<?php echo round($tax, 2);?> </p>
             <hr id="break"> 
-            <p>Total:</p>
+            <p>Total: $<?php echo round($total, 2);?> </p>
+
+            <a href="../html/checkout.php"><button class="bookbutt">Checkout</button></a>
         </div>
     </div>
 </div>

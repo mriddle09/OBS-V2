@@ -5,6 +5,7 @@
     include_once("../php/usersinit.php");
     include_once("../php/cardinfoinit.php");
     include_once("../php/initsubs.php");
+    include_once("../php/initcart.php");
     include("../php/getbooks.php");
     include("../php/getbestsellers.php");
     include("../php/getfeatured.php");
@@ -33,7 +34,7 @@
             </form>
             <div class="headbutt">
                 <a href="../html/userhomepage.php"><button class="homebutt"></button></a>
-                <a href="../html/cart.html"><button class="cartbutt"></button></a>
+                <a href="../html/cart.php"><button class="cartbutt"></button></a>
                 <button id="abutt" class="accbutt" onclick="userMenu()"></button>
 
                 <div id="usermenu" class="accmenu">
@@ -79,7 +80,24 @@
                         <div class="hidfo">
                             <p>Year of Publication: <?php echo $fbook['Year'] ?></p>
                             <p>Genre: <?php echo $fbook['Category'] ?></p>
-                            <button class="bookbutt2">Add to cart</button>
+                            <form method="POST" action="../php/addtocart.php">
+
+                                <?php
+                                    $input1 = '<input type="hidden" name="bid" value="';
+                                    $hold1 = $fbook['bookID'];
+                                    $end1 = '">';
+                                    echo $input1.$hold1.$end1;
+
+                                ?>
+                                
+                                
+                                <input type="hidden" value="<?php echo $fbook['Title'] ?>" name="bname">
+                                <input type="hidden" value="<?php echo $fbook['Price'] ?>" name="bprice">
+                                <input type="hidden" value="<?php echo $fbook['Author'] ?>" name="bauth">
+                                <input type="hidden" value="<?php echo $fbook['Cover'] ?>" name="bcov">
+                                <input  type="submit" class="bookbutt2" value="Add to cart">
+                            </form>
+                            
                             <button class="bookbutt2" onclick="hideDetails('<?php echo $i ?>')">Hide details</button>
                         </div>
                             
@@ -117,7 +135,24 @@
                     <div class="hidfo">
                         <p>Year of Publication: <?php echo $bbook['Year'] ?></p>
                         <p>Genre: <?php echo $bbook['Category'] ?></p>
-                        <button class="bookbutt2">Add to cart</button>
+                        <form method="POST" action="../php/addtocart.php">
+
+                                <?php
+                                    $input1 = '<input type="hidden" name="bid" value="';
+                                    $hold1 = $bbook['bookID'];
+                                    $end1 = '">';
+                                    echo $input1.$hold1.$end1;
+
+                                ?>
+                                
+                                
+                                <input type="hidden" value="<?php echo $bbook['Title'] ?>" name="bname">
+                                <input type="hidden" value="<?php echo $bbook['Price'] ?>" name="bprice">
+                                <input type="hidden" value="<?php echo $bbook['Author'] ?>" name="bauth">
+                                <input type="hidden" value="<?php echo $bbook['Cover'] ?>" name="bcov">
+                                <input  type="submit" class="bookbutt2" value="Add to cart">
+                            </form>
+                        
                         <button class="bookbutt2" onclick="hideDetails1('<?php echo $i ?>')">Hide details</button>
                     </div>
                         

@@ -73,7 +73,11 @@
                     <p>Price <?php echo $cart['bookPrice'] ?></p>
                 </div>
                     
-                <button class="bookbutt">Remove From Cart</button>
+                <form method="POST" action="../php/removefromcart.php">
+                    <input type="hidden" value="<?php echo $cart['bookNum'];?>" name="remove">
+                    <input class="bookbutt"  type="submit" value="Remove From Cart">
+                </form>
+
             </div>
 
         <?php endforeach; ?>

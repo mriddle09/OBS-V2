@@ -4,6 +4,12 @@
     include_once("initcart.php");
     include('../php/getactiveuser.php');
 
+    if ($activeuser == FALSE) {
+        include("../html/userhomepage.php");
+        echo "<p class='activecon'>please login to add to cart</p>";
+        exit;
+    }
+
     $bookID = filter_input(INPUT_POST, 'bid');
     $bookname = filter_input(INPUT_POST, 'bname');
     $bookprice = filter_input(INPUT_POST, 'bprice');

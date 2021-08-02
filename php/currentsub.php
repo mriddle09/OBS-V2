@@ -4,7 +4,7 @@
 
     if ($activeuser == FALSE) {
         include("../html/userhomepage.php");
-        echo "<p class='activecon'>Please login to view or add to cart</p>";
+        echo "<p class='activecon'>please login to view cart</p>";
         exit;
     }
 

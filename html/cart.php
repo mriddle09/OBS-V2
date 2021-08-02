@@ -5,7 +5,7 @@
 
     if($carts == FALSE) {
         include("../html/userhomepage.php");
-        echo "<h3 class='activecon'>Please login or add something to your cart to view cart</h3>";
+        echo "<h3 class='activecon'>Please add something to your cart to view cart</h3>";
         exit;
     }
 

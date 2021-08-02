@@ -45,13 +45,5 @@
         <h1>Welcome, <?php echo $activeuser['firstName'] ?></h1>
         <h2>Your account has been succesfully created.</h2>
     </div>
-    <form action="../php/sendaccountcreatedemail.php" id="sendmessage" method="POST">
-        <input type='hidden' name='messagetype' value="<?php echo $emailmessage?>"/>
-        <input type='hidden' name='email' value="<?php echo $activeuser['email']?>"/>
-    </form>
-    <script type="text/javascript">
-        document.getElementById("sendmessage").submit(); // Here formid is the id of your form
-    </script>
-
 </body>
 </html>

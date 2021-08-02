@@ -58,10 +58,14 @@ $querycheck = "SELECT * FROM userinfo WHERE email = :Email";
     $setsub->bindValue(':new_ID', $currentid);
     $setsub->execute();
     $setsub->closeCursor(); 
-
-
-    include("../html/accountconfirm.php");
-
-    
-
 ?>
+<form action="sendaccountcreatedemail.php" id="sendmessage" method="POST">
+    <input type='hidden' name='email' value="<?php echo $email?>"/>
+</form>
+<script type="text/javascript">
+    document.getElementById("sendmessage").submit(); // Here formid is the id of your form
+</script>
+<?php
+    include("../html/accountconfirm.php");
+?>
+

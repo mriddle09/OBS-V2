@@ -73,7 +73,6 @@
         </div>
     </div>
     <form action="../php/sendorderemail.php" id="sendmessage" method="POST">
-        <input type='hidden' name='messagetype' value="<?php echo $emailmessage?>"/>
         <input type='hidden' name='email' value="<?php echo $activeuser['email']?>"/>
     </form>
     <script type="text/javascript">
@@ -82,3 +81,6 @@
 
 </body>
 </html>
+<?php
+    include("../html/userhomepage.php");
+?>

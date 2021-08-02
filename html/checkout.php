@@ -56,9 +56,9 @@
 
 <div id="checkout">
     <div id="order">
-        
+        <div id="scroller">
         <?php foreach($carts as $car) : ?>
-            <div class="book">
+            <div class="checkbook">
             <img src="<?php echo $car['bookCover'] ?>" class="bookimg">
                 <div class="infocart">
                     <p><?php echo $car['bookName'] ?></p>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
-
+        </div>
         <div id="summ"> 
         <p>Subtotal: $<?php echo round($subtotal, 2);?> </p>
             <p>Shipping: $<?php echo round($shipping, 2);?> </p>
@@ -76,8 +76,9 @@
         </div>
     </div>
 
-    <div id="infomat">
-        <div id="payfo">
+    <div id="infomat" >
+        <div id="payfo" class="infocheck">
+            <h3>Payment Information</h3>
             <p id="p1"><?php if($activecard != FALSE) {
                 echo $activecard['type'];
             } else {
@@ -112,7 +113,8 @@
             </div>
         </div>
             
-        <div id="shipfo">
+        <div id="shipfo" class="infocheck">
+            <h3>Shipping Information</h3>
             <p><?php echo $activeuser['street']?></p>
             <p><?php echo $activeuser['city']?></p>
             <p><?php echo $activeuser['stateID']?></p>
@@ -122,7 +124,7 @@
         </div>
         
     </div>
-        <a href="../html/orderconfirm.php"><button class="bookbutt">Place Order</button></a>
+        <a id="conbutt" href="../html/orderconfirm.php"><button class="bookbutt">Place Order</button></a>
 </div>
 
 </body>

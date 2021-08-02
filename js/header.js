@@ -57,3 +57,13 @@ function hideDetails1(elid) {
         document.getElementById("boo" + i.toString()).style.display = "flex";
     }
 }
+
+function updatePayment() {
+    var newtype = document.getElementById('i1'); 
+    var newnum = document.getElementById('i2'); 
+    var newexp = document.getElementById('i3'); 
+
+    document.getElementById('p1').innerText = newtype; 
+    document.getElementById('p2').innerText = newnum;
+    document.getElementById('p3').innerText = newexp; 
+}

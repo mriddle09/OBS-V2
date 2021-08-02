@@ -4,7 +4,7 @@
 
     $cartcreate = "CREATE TABLE IF NOT EXISTS cart 
                     (
-                        bookNum INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                        bookNum INT(6) UNSIGNED PRIMARY KEY,
                         bookName VARCHAR(255), 
                         bookCover TEXT, 
                         bookAuthor VARCHAR(255),

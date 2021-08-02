@@ -1,6 +1,7 @@
 <?php 
 
     include("../php/getcart.php");
+    include("../php/currentsub.php");
 
     if($carts == FALSE) {
         include("../html/userhomepage.php");
@@ -17,6 +18,13 @@
         $subtotal += $c['bookPrice'];
     }
     $tax = $subtotal * 0.07; 
+
+    if ($activesub['plan'] == 2) {
+        $shipping = 0; 
+    }
+    if ($activesub['plan'] == 3) {
+        $shipping = 0; 
+    }
 
     $total = $subtotal + $shipping + $tax;
 

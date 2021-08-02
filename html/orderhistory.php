@@ -1,3 +1,9 @@
+<?php
+
+    include("../php/gethistory.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,18 +46,35 @@
         <h2>Order History</h2>
 
             <div class="scrollable">
-                <?php for ($j = 0; $j < 80; $j++) : ?>
+                <?php foreach ($history as $h) : ?>
 
                 <div class="pastbook">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg">
+                    <img src="<?php echo $h['cover'] ?>">
                         <div class="innerinfo">
-                            <p>To Kill A Mocking Bird</p>
-                            <p>Harper Lee</p>
+                            <p><?php echo $h['title'] ?></p>
+                            <p><?php echo $h['author'] ?></p>
+                            <p><?php echo $h['price'] ?> </p>
                         </div>    
-                        <button>Buy Again</button>
+                        <form method="POST" action="../php/addtocart.php">
+
+                                <?php
+                                    $input1 = '<input type="hidden" name="bid" value="';
+                                    $hold1 = $h['bookID'];
+                                    $end1 = '">';
+                                    echo $input1.$hold1.$end1;
+
+                                ?>
+                                
+                                
+                                <input type="hidden" value="<?php echo $h['title'] ?>" name="bname">
+                                <input type="hidden" value="<?php echo $h['price'] ?>" name="bprice">
+                                <input type="hidden" value="<?php echo $h['author'] ?>" name="bauth">
+                                <input type="hidden" value="<?php echo $h['cover'] ?>" name="bcov">
+                                <input  type="submit" class="bookbutt2" value="Buy Again">
+                            </form>
                 </div>
 
-                <?php endfor; ?>
+                <?php endforeach; ?>
             </div>
 
     </div>

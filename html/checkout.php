@@ -78,25 +78,38 @@
 
     <div id="infomat">
         <div id="payfo">
-            <p><?php if($activecard != FALSE) {
+            <p id="p1"><?php if($activecard != FALSE) {
                 echo $activecard['type'];
             } else {
                 echo 'none';
             }
             ?></p>
-            <p><?php if($activecard != FALSE) {
+            <p id="p2"><?php if($activecard != FALSE) {
                 echo $activecard['cardNumber'];
             } else {
                 echo 'none';
             }
             ?></p>
-            <p><?php if($activecard != FALSE) {
+            <p id="p3"><?php if($activecard != FALSE) {
                 echo $activecard['exp'];
             } else {
                 echo 'none';
             }
             ?></p>
-            <button>Change payment info</button>
+            <button class="bookbutt" onclick= "showDetails('b')";>Change payment info</button>
+            <div class="hideable"  id="fdb">
+                <form>
+                    <lable>Type</label>
+                    <input type="text" id="i1">
+                    <br>
+                    <label>Number</label>
+                    <input type="text" id="i2">
+                    <br>
+                    <label>Expiration</label>
+                    <input type="date" id="i3">
+                    <input type="submit">
+                </form>
+            </div>
         </div>
             
         <div id="shipfo">
@@ -104,11 +117,12 @@
             <p><?php echo $activeuser['city']?></p>
             <p><?php echo $activeuser['stateID']?></p>
             <p><?php echo $activeuser['zip']?></p>
-            <button>Change shipping info</button>
+            <button class="bookbutt" >Change shipping info</button>
+
         </div>
         
     </div>
-        <a href="../html/orderconfirm.php"><button>Place Order</button></a>
+        <a href="../html/orderconfirm.php"><button class="bookbutt">Place Order</button></a>
 </div>
 
 </body>

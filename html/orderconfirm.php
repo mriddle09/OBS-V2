@@ -2,6 +2,7 @@
     include("../php/getactiveuser.php");
     include("../php/getactivecard.php");
     include("../php/getcart.php");
+    include("../php/addtohistory.php");
 
     $subtotal = 0; 
     $shipping = 3.99;
@@ -67,7 +68,7 @@
             <p>Charged to: <?php echo $activecard['type']?> ending in <?php echo substr($activecard['cardNumber'], -4) ?></p>
             <p>Shipped to: <?php echo $activeuser['street']?>, <?php echo $activeuser['city']?>, <?php echo $activeuser['stateID']?> <?php echo $activeuser['zip']?></p>
             <form action="../php/clearcart.php">
-                <input type='submit' value="Go Home">
+                <input type='submit' value="Go Home" class="bookbutt">
             </form>
         </div>
     </div>

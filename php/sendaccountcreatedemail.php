@@ -13,8 +13,7 @@ use Postmark\PostmarkClient;
 
 $client = new PostmarkClient("5b163fe7-e191-433d-bedb-a85c198f2b24");
 $fromEmail = "griffinhines@uga.edu";
-#$toEmail = filter_input(INPUT_POST, 'email');
-$toEmail = "griffinhines@uga.edu";
+$toEmail = filter_input(INPUT_POST, 'email');
 $subject = "Account created";
 $htmlBody = "An account has been created under this email address";
 $textBody = "";

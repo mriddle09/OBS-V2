@@ -2,6 +2,12 @@
 
     include("../php/getactiveuser.php");
 
+    if ($activeuser == FALSE) {
+        include("../html/userhomepage.php");
+        echo "<p class='activecon'>Please login to view or add to cart</p>";
+        exit;
+    }
+
     $querycurrentsub = "SELECT * FROM activesubs WHERE user = :u_id";
 
     

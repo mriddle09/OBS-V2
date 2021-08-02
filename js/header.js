@@ -63,7 +63,7 @@ function updatePayment() {
     var newnum = document.getElementById('i2'); 
     var newexp = document.getElementById('i3'); 
 
-    document.getElementById('p1').innerText = newtype; 
-    document.getElementById('p2').innerText = newnum;
-    document.getElementById('p3').innerText = newexp; 
+    document.getElementById('p1').innerHTML = newtype; 
+    document.getElementById('p2').innerHTML = newnum;
+    document.getElementById('p3').innerHTML = newexp; 
 }

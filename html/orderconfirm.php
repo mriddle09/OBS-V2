@@ -4,6 +4,12 @@
     include("../php/getcart.php");
     include("../php/addtohistory.php");
 
+    if($activecard == FALSE) {
+        include("../html/checkout.php");
+        echo "<p class='activecon'>Please enter payment information</p>";
+        exit;
+    }
+
     $subtotal = 0; 
     $shipping = 3.99;
     $tax = 0; 
@@ -75,6 +81,4 @@
 
 </body>
 </html>
-<?php
-    include("../html/userhomepage.php");
-?>
+

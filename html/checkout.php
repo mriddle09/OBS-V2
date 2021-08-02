@@ -97,20 +97,8 @@
                 echo 'none';
             }
             ?></p>
-            <button class="bookbutt" onclick= "showDetails('b')";>Change payment info</button>
-            <div class="hideable"  id="fdb">
-                <form>
-                    <lable>Type</label>
-                    <input type="text" id="i1">
-                    <br>
-                    <label>Number</label>
-                    <input type="text" id="i2">
-                    <br>
-                    <label>Expiration</label>
-                    <input type="date" id="i3">
-                    <input type="submit">
-                </form>
-            </div>
+            <a href="../html/changepayment.php"><button class="bookbutt">Change payment info</button></a>
+            
         </div>
             
         <div id="shipfo" class="infocheck">
@@ -119,7 +107,7 @@
             <p><?php echo $activeuser['city']?></p>
             <p><?php echo $activeuser['stateID']?></p>
             <p><?php echo $activeuser['zip']?></p>
-            <button class="bookbutt" >Change shipping info</button>
+            <a href="../html/changeaddress.php"><button class="bookbutt" >Change shipping info</button></a>
 
         </div>
         

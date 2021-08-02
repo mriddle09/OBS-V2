@@ -56,7 +56,7 @@
     </div>
 
     <div id="ordcon">
-        <h2>Your oder has been placed.</h2>
+        <h2>Your order has been placed.</h2>
         <div id="ordbooks">
             <h3>Books Ordered</h3>
             <?php foreach ($carts as $cart) : ?>

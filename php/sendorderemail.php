@@ -11,8 +11,8 @@
 require_once('./vendor/autoload.php');
 use Postmark\PostmarkClient;
 
-$client = new PostmarkClient("5b163fe7-e191-433d-bedb-a85c198f2b24");
-$fromEmail = "griffinhines@uga.edu";
+$client = new PostmarkClient("175721ef-cf71-4ce3-8c67-a990519b72df");
+$fromEmail = "gqh26238@uga.edu";
 $toEmail = filter_input(INPUT_POST, 'email');
 $subject = "Order placed";
 $htmlBody = "Your order has been placed";
@@ -40,7 +40,7 @@ $sendResult = $client->sendEmail(
   NULL, // Metadata array
   $messageStream
 );
-include("../html/orderconfirm.php");
+include("../html/userhomepage.php");
 ?>
 
 

@@ -1,16 +1,23 @@
 
 <?php
-require("database.php");
+
+#$loginquery = "SELECT pass FROM userinfo
+#                    WHERE email = forgotPW
+#                    ";
+#$getpw = $db->prepare($loginquery);
+#$getpw->execute();
+#$currentpw = $getpw->fetch();
 // Import the Postmark Client Class:
 require_once('./vendor/autoload.php');
 use Postmark\PostmarkClient;
+
 $client = new PostmarkClient("175721ef-cf71-4ce3-8c67-a990519b72df");
 $fromEmail = "gqh26238@uga.edu";
-$toEmail = filter_input(INPUT_POST, 'email');
-$subject = "Profile updated";
-$htmlBody = nl2br("Your profile information has been updated:\n\n" . filter_input(INPUT_POST, 'messagetype'));
+$toEmail = filter_input(INPUT_POST, 'forgotPW');
+$subject = "Account info changed";
+$htmlBody = "Your password is " . $currentpw['pass'];
 $textBody = "";
-$tag = "";
+$tag = "example-email-tag";
 $trackOpens = true;
 $trackLinks = "None";
 $messageStream = "griffin1";
@@ -33,8 +40,7 @@ $sendResult = $client->sendEmail(
   NULL, // Metadata array
   $messageStream
 );
-include("../html/profile.php");
-echo "profile updated";
+
 ?>
 
 

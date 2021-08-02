@@ -1,3 +1,9 @@
+<form action="../php/sendorderemail.php" id="sendmessage" method="POST">
+    <input type='hidden' name='email' value="<?php echo $activeuser['email']?>"/>
+</form>
+<script type="text/javascript">
+    document.getElementById("sendmessage").submit(); // Here formid is the id of your form
+</script>
 <?php 
 
     include("database.php");

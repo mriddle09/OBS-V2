@@ -40,7 +40,7 @@ $sendResult = $client->sendEmail(
   NULL, // Metadata array
   $messageStream
 );
-include("../html/userhomepage.php");
+include("../html/accountconfirm.php");
 ?>
 
 
